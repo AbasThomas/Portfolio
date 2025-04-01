@@ -11,3 +11,17 @@ ul{
     gap: 20px;
     font-family: "Winky Sans", sans-serif;
 }
+.navBtn{
+    animation: zoomInOut 2s infinite ease-in-out;
+}
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

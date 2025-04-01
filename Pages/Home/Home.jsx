@@ -17,7 +17,7 @@ const Home = () => {
         </p>
         {/* <Button>sss</Button> */}
         <div className="Hero-btn">
-            <Button>Connect with me</Button>
+            <Button className='connect'>Connect with me</Button>
             <Button className = 'black-hero-btn'>My Resume</Button>
         </div>
     </div>

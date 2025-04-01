@@ -6,15 +6,16 @@ import html from '../../src/assets/html_1.svg'
 import css from '../../src/assets/css-alt.svg'
 import javascript from '../../src/assets/javascript.svg'
 import react from '../../src/assets/react (1).svg'
-
+import ui from '../../src/assets/ui.png'
+import graphic from '../../src/assets/images.png'
 const Services = () => {
     const Services = [
         {title : "HTML", img: html , },
         {title : "CSS", img: css },
         {title : "JAVASCRIPT",img: javascript },
         {title : "REACT JS",img: react },
-        {title : "UI / UX DESIGN",},
-        {title : "GRAPHIC DESIGN",},
+        {title : "UI / UX DESIGN", img : ui, },
+        {title : "GRAPHIC DESIGN", img : graphic, },
 
         
 
