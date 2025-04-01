@@ -1,0 +1,21 @@
+.hero-Header{
+    max-width:1000px;
+    text-align: center;
+    justify-self: center;
+}
+.Hero-text{
+    max-width: 800px;
+    text-align: center;
+    justify-self: center;
+    font-size: 20px;
+}
+.Hero-btn{
+    justify-self: center;
+    padding-top: 2rem;
+    display: flex;
+    gap: 20px;
+}
+.black-hero-btn{
+    background: black;
+    border:  2px solid white;
+}

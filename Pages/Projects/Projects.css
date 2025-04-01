@@ -1,0 +1,47 @@
+.Project-cont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    /* justify-self: center; */
+    align-content: center;
+    row-gap: 30px;
+    column-gap: -5/0px;
+}
+.Project-Img{
+    width: 350px;
+    /* height: 250px; */
+    /* border: 1px solid #fff; */
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background 5s ease, transform 0.3s ease;
+
+}
+.Project-Img:hover{
+    border: 3px solid rgb(133, 3, 133);
+    transform: scale(1.05);
+}
+.show_more-btn{
+    background: black;
+    justify-self: center;
+    border: 2px solid #ffff;
+    justify-self: center;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    border: 2px solid white;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: .6s;
+    cursor: pointer;
+}
+.btn-showMore{
+    justify-self: center;
+    padding-top: 30px;
+}
+.btn-showMore img{
+    width: 25px;
+}

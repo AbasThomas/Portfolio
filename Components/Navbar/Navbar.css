@@ -1,0 +1,13 @@
+.Nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 270px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    font-family: "Winky Sans", sans-serif;
+}

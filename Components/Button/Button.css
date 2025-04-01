@@ -1,0 +1,16 @@
+.Button-container {
+    padding: 15px 20px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 .36%, #B923E1 102.06%);
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.5s ease, transform 0.3s ease;
+  }
+  
+  .Button-container:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  

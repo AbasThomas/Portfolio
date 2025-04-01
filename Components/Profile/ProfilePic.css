@@ -1,0 +1,32 @@
+.profile-pic {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: grid;
+    justify-self: center;
+  }
+  
+  .profile-pic img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Size variations */
+  .profile-pic.small {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .profile-pic.medium {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .profile-pic.large {
+    width: 180px;
+    height: 180px;
+  }
+  

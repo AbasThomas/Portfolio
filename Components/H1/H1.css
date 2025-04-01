@@ -1,0 +1,10 @@
+.custom-h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0.5em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  

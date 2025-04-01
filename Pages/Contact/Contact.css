@@ -1,0 +1,35 @@
+.contact-cont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.card{
+    display: flex;
+    gap: 20px;
+    padding-top: 30px;
+    font-size: 18px;
+}
+.right-contact-container{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+.right-contact-container input, textarea{
+    border: none;
+    width: 100%;
+    padding: 18px 0 18px 20px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #a0a0a0;
+    font-family: Outfit;
+    font-size: 18px;
+}
+label{
+    font-size: 19px ;
+    color: #d8d8d8;
+}

@@ -1,0 +1,11 @@
+.App-container{
+   padding: 20px 100px;
+   background-color: #161513;
+   height: 100%;
+   color: white;
+   font-family: "Winky Sans", sans-serif;
+}
+*{
+  font-family: "Winky Sans", sans-serif;
+
+}
