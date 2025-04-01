@@ -2,7 +2,7 @@ import React from 'react'
 import H1 from '../../Components/H1/H1'
 import GardientText from '../../Components/GradientText/GardientText'
 import './About.css'
-
+import ProfileImg from '../../src/assets/pfp.jpg'
 const About = () => {
     // const skills = [
     //     {title :'HTML & CSS'},
@@ -12,17 +12,16 @@ const About = () => {
 
 
     // ];
-    const stats =[
-        { number : '10+', text : 'Years Of Experience'},
-        { number : '10+', text : 'Years Of Experience'},
-        { number : '10+', text : 'Years Of Experience'}
-
-    ]
+    const stats = [
+        { number: '10+', text: 'Years Of Experience' },
+        { number: '100+', text: 'Completed Projects' },
+        { number: '50+', text: 'Happy Clients' }
+    ];
   return (
     <div>
         <H1>ABOUT me</H1>
         <div className="About-text-container">
-            <img src="src/assets/pfp.jpg" alt="" className='Profile-image'/>
+            <img src={ProfileImg} alt="" className='Profile-image'/>
             <div className='Text-container'>
                 <p>I am an experienced Frontend Developer with over a decade of professional expertise in the field.
                      Throughout my career, I have had the privilege of collaborating with prestigious organizations,
