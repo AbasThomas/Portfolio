@@ -53,7 +53,7 @@
       display: flex;
       gap: 20px;
       overflow-x: auto;
-      animation: scroll 8   s linear infinite;
+      animation: scroll 8s linear infinite;
       width: max-content;
     }
   
