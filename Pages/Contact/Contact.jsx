@@ -9,9 +9,9 @@ import Button from '../../Components/Button/Button'
 
 const Contact = () => {
   const contactInfo =[
-      {img: mail, text: 'greatstackdev@gmail.com',},
-      {img: call, text:  '+772-825-524',},
-      {img: loaction, text: 'CA, United States',}
+      {img: mail, text: 'thomasabasienyene2@gmail.com',},
+      {img: call, text:  '+234-806-492-2679',},
+      {img: loaction, text: 'Rivers-State, Nigeria',}
 
   ]
   return (

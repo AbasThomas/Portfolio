@@ -10,3 +10,36 @@
     gap: 30px;
     padding-top: 30px;
 }
+.statsHeader{
+    font-size : 60px;
+}
+.statsText{
+    font-size : 25px;
+}
+@media (max-width: 768px) {
+    .h1{
+        display: flex;
+        justify-content: flex-start;
+    }    
+    .Profile-image{
+        display: none;
+    }
+    .statsHeader{
+        font-size: 40px;
+    }
+    .stats-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        justify-self: center;
+        justify-items: center;
+    }
+    .statsText{
+        font-size : px;
+        font-weight: 100;
+    }
+    .stats-container{
+        flex-wrap: wrap;
+    }
+}

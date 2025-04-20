@@ -45,3 +45,12 @@
 .btn-showMore img{
     width: 25px;
 }
+@media (max-width: 768px) {
+    .Project-cont{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .Project-Img{
+        width: 100%;
+    }
+}

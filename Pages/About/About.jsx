@@ -19,7 +19,7 @@ const About = () => {
     ];
   return (
     <div>
-        <H1>ABOUT me</H1>
+        <H1 className='h1'>ABOUT me</H1>
         <div className="About-text-container">
             <img src={ProfileImg} alt="" className='Profile-image'/>
             <div className='Text-container'>
@@ -70,11 +70,8 @@ const About = () => {
                     padding  : ' 20px 50px',
                     textAlign : 'center',   
                 }}>
-                    <h1 style={{
-                        fontSize : '60px',
-                    }}><GardientText>{props.number}</GardientText></h1>
-                    <p style={{
-                        fontSize : '25px',
+                    <h1  className ='statsHeader'><GardientText>{props.number}</GardientText></h1>
+                    <p className= 'statsText'style={{
                     }}>{props.text}</p>
                 </div>
             ))}

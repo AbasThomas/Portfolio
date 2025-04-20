@@ -25,3 +25,8 @@ ul{
         transform: scale(1);
     }
 }
+@media (max-width: 768px) {
+    .Nav-container{
+        display: none;
+    }
+}

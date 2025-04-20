@@ -35,3 +35,15 @@
     background: black;
     border:  2px solid white;
 }
+@media (max-width: 768px) {
+    .hero-Header{
+        width: 100%;
+        font-size: px;
+    }
+    .custom-h1{
+        font-size: 40px;
+    }
+    .Hero-text{
+        
+    }
+}

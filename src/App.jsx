@@ -8,6 +8,7 @@ import About from '../Pages/About/About'
 import Services from '../Pages/Services/Services'
 import Projects from '../Pages/Projects/Projects'
 import Contact from '../Pages/Contact/Contact'
+import Footer from '../Pages/Footer/Footer'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Services/>
       <Projects/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }

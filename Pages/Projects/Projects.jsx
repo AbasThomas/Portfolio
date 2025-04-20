@@ -22,7 +22,7 @@ const Projects = () => {
   ]
   return (
     <div>
-        <H1>My Latest Work</H1>
+        <H1 className='h1'>My Latest Work</H1>
         <div className="Project-cont">
           {works.map((props, index) => (
                   <div className="Project-card" key={index}>

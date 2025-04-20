@@ -23,17 +23,16 @@ const Services = () => {
     ]
   return (
     <div>
-        <H1>My Services</H1>
+        <H1 className='h1'>My Services</H1>
+        <div className="service-wrapper">
         <div className="services-cont">
             {Services.map((props, index) => (
                     <div className="services" key={index} >
                         <img src={props.img} alt={props.name} className='service-img' />
-                        <h2 style={{
-                            paddingTop :'2px',
-                            fontSize :'20px',   
-                        }}>{props.title}</h2>
+                        <h2 className='service-text'>{props.title}</h2>
                     </div>
                 ))}
+        </div>
         </div>
     </div>
   )
