@@ -21,12 +21,12 @@ const App = () => {
             path="/"
             element={
               <>
-                <Home />
-                <About />
-                <Services />
-                <Projects />
-                <Contact />
-                <Footer />
+                <div id="home"><Home /></div>
+<div id="about"><About /></div>
+<div id="services"><Services /></div>
+<div id="portfolio"><Projects /></div>
+<div id="contact"><Contact /></div>
+
               </>
             }
           />

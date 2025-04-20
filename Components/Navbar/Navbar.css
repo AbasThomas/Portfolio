@@ -11,8 +11,12 @@
     list-style: none;
     gap: 20px;
     font-family: "Winky Sans", sans-serif;
+ 
   }
-  
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
   .navBtn {
     animation: zoomInOut 2s infinite ease-in-out;
   }

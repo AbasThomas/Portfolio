@@ -23,11 +23,11 @@ const Navbar = () => {
         <h1 style={{ fontSize: '2rem' }}>AbaS</h1>
         <nav>
           <ul>
-            <li onClick={Home}>Home</li>
-            <li>About Me</li>
-            <li>Services</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
+            <li><a href="#home" onClick={Home}>Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
         <Button className='navBtn' onClick={handleConnectClick}>Connect With Me</Button>
