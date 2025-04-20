@@ -2,25 +2,35 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import Button from '../Button/Button';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleConnectClick = () => {
+    navigate('/connect');
+    setMobileOpen(false); // closes mobile menu if open
+  };
+    const Home = () => {
+    navigate('/');
+  };
 
   return (
     <>
-      {/* Desktop Nav (unchanged) */}
+      {/* Desktop Nav */}
       <div className='Nav-container'>
         <h1 style={{ fontSize: '2rem' }}>AbaS</h1>
         <nav>
           <ul>
-            <li>Home</li>
+            <li onClick={Home}>Home</li>
             <li>About Me</li>
             <li>Services</li>
             <li>Portfolio</li>
             <li>Contact</li>
           </ul>
         </nav>
-        <Button className='navBtn'>Connect With Me</Button>
+        <Button className='navBtn' onClick={handleConnectClick}>Connect With Me</Button>
       </div>
 
       {/* Mobile Nav */}
@@ -44,7 +54,7 @@ const Navbar = () => {
             <li>Portfolio</li>
             <li>Contact</li>
           </ul>
-          <Button className='navBtn'>Connect With Me</Button>
+          <Button className='navBtn' onClick={handleConnectClick}>Connect With Me</Button>
         </div>
       </div>
     </>

@@ -4,11 +4,13 @@ import H1 from '../../Components/H1/H1';
 import GardientText from '../../Components/GradientText/GardientText';
 import './Home.css';
 import Button from '../../Components/Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className='HomeContainer'>
-      {/* wrap ProfilePic so we can control its size responsively */}
       <div className='profile-container'>
         <ProfilePic />
       </div>
@@ -24,7 +26,9 @@ const Home = () => {
       </p>
 
       <div className="Hero-btn">
-        <Button className='connect'>Connect with me</Button>
+        <Button className='connect' onClick={() => navigate('/connect')}>
+          Connect with me
+        </Button>
         <Button className='black-hero-btn'>My Resume</Button>
       </div>
     </div>
