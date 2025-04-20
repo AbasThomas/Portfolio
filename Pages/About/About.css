@@ -1,45 +1,109 @@
-.Profile-image{
-    width:290px;
-    height:300px;
-    border-radius: 30px;
-}
-.About-text-container{
+.AboutContainer {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Winky Sans", sans-serif;
+  }
+  
+  .about-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Two‑column layout */
+  .About-text-container {
     display: flex;
-    /* align-items: ; */
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+  }
+  
+  /* Profile image */
+  .Profile-image {
+    width: 290px;
+    height: 300px;
+    border-radius: 30px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Text side */
+  .Text-container {
+    flex: 1;
     font-size: 20px;
-    gap: 30px;
-    padding-top: 30px;
-}
-.statsHeader{
-    font-size : 60px;
-}
-.statsText{
-    font-size : 25px;
-}
-@media (max-width: 768px) {
-    .h1{
-        display: flex;
-        justify-content: flex-start;
-    }    
-    .Profile-image{
-        display: none;
+    line-height: 1.6;
+  }
+  
+  .extra-para {
+    margin-top: 1.5rem;
+  }
+  
+  /* Stats cards */
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .stats-card {
+    padding: 0 2rem;
+    text-align: center;
+    border-right: 1px solid #ccc;
+  }
+  
+  .stats-card:last-child {
+    border-right: none;
+  }
+  
+  .statsHeader {
+    font-size: 60px;
+    margin: 0;
+  }
+  
+  .statsText {
+    font-size: 25px;
+    margin: 0.5rem 0 0;
+  }
+  
+  /* —————————————— Responsive —————————————— */
+  @media (max-width: 768px) {
+    .AboutContainer {
+      padding: 1rem;
     }
-    .statsHeader{
-        font-size: 40px;
+  
+    .About-text-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
     }
-    .stats-card{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        justify-self: center;
-        justify-items: center;
+  
+    .Profile-image {
+      width: 180px;
+      height: 180px;
     }
-    .statsText{
-        font-size : px;
-        font-weight: 100;
+  
+    .Text-container {
+      font-size: 16px;
     }
-    .stats-container{
-        flex-wrap: wrap;
+  
+    .stats-container {
+      flex-direction: column;
+      gap: 1.5rem;
     }
-}
+  
+    .stats-card {
+      border: none;
+      padding: 1rem;
+    }
+  
+    .statsHeader {
+      font-size: 40px;
+    }
+  
+    .statsText {
+      font-size: 18px;
+    }
+  }
+  

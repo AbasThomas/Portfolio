@@ -1,49 +1,91 @@
-.hero-Header{
-    max-width:1000px;
+/* Base container: center everything with some breathing room */
+.HomeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  
+  /* Control ProfilePic size */
+  .profile-container {
+    width: 250px;
+    height: 250px;
+  }
+  .profile-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  /* Your existing styles, untouched */
+  .hero-Header {
+    max-width: 1000px;
     text-align: center;
     justify-self: center;
-}
-.Hero-text{
+  }
+  .Hero-text {
     max-width: 800px;
     text-align: center;
     justify-self: center;
     font-size: 20px;
-}
-.Hero-btn{
+  }
+  .Hero-btn {
     justify-self: center;
     padding-top: 2rem;
     display: flex;
     gap: 20px;
-
-}
-.connect{
+  }
+  .connect {
     animation: zoomInOut 2s infinite ease-in-out;
-
-}
-@keyframes zoomInOut {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-.black-hero-btn{
+  }
+  @keyframes zoomInOut {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  .black-hero-btn {
     background: black;
-    border:  2px solid white;
-}
-@media (max-width: 768px) {
-    .hero-Header{
-        width: 100%;
-        font-size: px;
+    border: 2px solid white;
+  }
+  
+  /* ————————————————————————————— */
+  /* Mobile / Tablet adjustments */
+  @media (max-width: 768px) {
+    .HomeContainer {
+      padding: 1rem;
+      gap: 1rem;
     }
-    .custom-h1{
-        font-size: 40px;
+  
+    .profile-container {
+      width: 150px;
+      height: 150px;
     }
-    .Hero-text{
-        
+  
+    .hero-Header {
+      max-width: 90%;
+      margin: 0 auto;
     }
-}
+    .hero-Header h1 {
+      /* override your H1 for smaller screens */
+      font-size: 1.5rem;
+    }
+  
+    .Hero-text {
+      max-width: 90%;
+      font-size: 16px;
+      margin: 0 auto;
+    }
+  
+    .Hero-btn {
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 300px;
+    }
+    .Hero-btn button {
+      width: 100%;
+    }
+  }
+  

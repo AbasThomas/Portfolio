@@ -1,60 +1,112 @@
-import React from 'react'
-import './Contact.css'
-import H1 from '../../Components/H1/H1'
-import GardientText from '../../Components/GradientText/GardientText'
-import mail from '../../src/assets/Contacts/mail_icon.svg'
-import call from '../../src/assets/Contacts/call_icon.svg'
-import loaction from '../../src/assets/Contacts/location_icon.svg'
-import Button from '../../Components/Button/Button'
+import React from 'react';
+import './Contact.css';
+import H1 from '../../Components/H1/H1';
+import GardientText from '../../Components/GradientText/GardientText';
+import mail from '../../src/assets/Contacts/mail_icon.svg';
+import call from '../../src/assets/Contacts/call_icon.svg';
+import locationIcon from '../../src/assets/Contacts/location_icon.svg';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import Button from '../../Components/Button/Button';
 
 const Contact = () => {
-  const contactInfo =[
-      {img: mail, text: 'thomasabasienyene2@gmail.com',},
-      {img: call, text:  '+234-806-492-2679',},
-      {img: loaction, text: 'Rivers-State, Nigeria',}
+  const contactInfo = [
+    {
+      icon: mail,
+      text: 'thomasabasienyene2@gmail.com',
+      link: 'mailto:thomasabasienyene2@gmail.com',
+    },
+    {
+      icon: call,
+      text: '+234-806-492-2679',
+      link: 'tel:+2348064922679',
+    },
+    {
+      icon: locationIcon,
+      text: 'Rivers‑State, Nigeria',
+    },
+    {
+      icon: <FaGithub size={25} />,
+      text: 'github.com/thomasabas',
+      link: 'https://github.com/thomasabas',
+    },
+    {
+      icon: <FaLinkedin size={25} />,
+      text: 'linkedin.com/in/thomasabas',
+      link: 'https://linkedin.com/in/thomasabas',
+    },
+  ];
 
-  ]
   return (
-    <div>
-        <H1>Get in touch</H1>
-        <div className="contact-cont">
-            <div className="left-contact-container">
-                <GardientText><h1 style={{
-                  fontSize : '50px', 
-                }}>Lets Talk</h1></GardientText>  
-                <p style={{
-                  fontSize : '18px',
-                  width : '70%',
-                }}>Im currently available to take on new projects, 
-                  so feel free to send me a message about anything you want me to work on. You can contact me anytime</p>
-                
+    <div className="ContactContainer">
+      <H1>Get in touch</H1>
 
-                  {contactInfo.map((props, index) => (
-                <div className="card" key={index}>
-                    <img src={props.img} alt={props.text} style={{
-                      width: '25px',
-                    }}/>
-                    <p>{props.text}</p>
-                </div>
-            ))}
+      <div className="contact-cont">
+        {/* Left side: intro + cards */}
+        <div className="left-contact-container">
+          <GardientText>
+            <h1 className="lets-talk">Let’s Talk</h1>
+          </GardientText>
+          <p className="contact-description">
+            I’m currently available to take on new projects, so feel free to
+            send me a message about anything you’d like me to work on. You can
+            contact me anytime.
+          </p>
+
+          {contactInfo.map((info, idx) => (
+            <div className="card" key={idx}>
+              <div className="icon">
+                {typeof info.icon === 'string' ? (
+                  <img src={info.icon} alt={info.text} />
+                ) : (
+                  info.icon
+                )}
+              </div>
+              {info.link ? (
+                <a
+                  href={info.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {info.text}
+                </a>
+              ) : (
+                <p>{info.text}</p>
+              )}
             </div>
-            <form className="right-contact-container">
-              <label htmlFor="">Your Name</label>
-              <input type="text" name = 'name' placeholder='Enter your name ' style={{
-                height : '50px',
-                width : '100%',
-              }}/>
-
-              <label htmlFor="email">Your Email </label>
-              <input type="email" name = 'email' placeholder='Enter your email'/>
-
-              <label htmlFor="message">Write your message here</label>
-              <textarea type="text" name = 'message' placeholder='Enter your Message' rows={8}/>   
-              <Button className='submitBtn'>Submit Now</Button>          
-            </form>
+          ))}
         </div>
-    </div>
-  )
-}
 
-export default Contact
+        {/* Right side: contact form */}
+        <form className="right-contact-container">
+          <label htmlFor="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+
+          <label htmlFor="email">Your Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+
+          <label htmlFor="message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows={6}
+            placeholder="Enter your message"
+          />
+
+          <Button className="submitBtn">Submit Now</Button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

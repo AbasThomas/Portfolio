@@ -1,56 +1,85 @@
-.Project-cont{
+/* Container to center everything & add vertical padding */
+.ProjectsContainer {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Grid: 3 columns on desktop, auto‑fit smaller cards */
+  .Project-cont {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    /* justify-self: center; */
-    align-content: center;
-    row-gap: 30px;
-    column-gap: -5/0px;
-}
-.Project-Img{
-    width: 350px;
-    /* height: 250px; */
-    /* border: 1px solid #fff; */
-    cursor: pointer;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 2rem;
+  }
+  
+  /* Project image styling */
+  .Project-Img {
+    width: 100%;
+    max-width: 350px;
     border-radius: 12px;
-    transition: background 5s ease, transform 0.3s ease;
-
-}
-.Project-Img:hover{
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s ease;
+  }
+  
+  .Project-Img:hover {
     border: 3px solid rgb(133, 3, 133);
     transform: scale(1.05);
-}
-.show_more-btn{
+  }
+  
+  /* Center the “Show More” button */
+  .btn-showMore {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .show_more-btn {
     background: black;
-    justify-self: center;
-    border: 2px solid #ffff;
-    justify-self: center;
-    padding: 15px 30px;
+    color: white;
+    border: 2px solid white;
+    padding: 20px 40px;
     display: flex;
     align-items: center;
     gap: 10px;
     border-radius: 50px;
-    border: 2px solid white;
-    padding: 20px 40px;
     font-size: 20px;
     font-weight: 500;
-    margin-bottom: 20px;
-    transition: .6s;
     cursor: pointer;
-}
-.btn-showMore{
-    justify-self: center;
-    padding-top: 30px;
-}
-.btn-showMore img{
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .show_more-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  
+  .btn-showMore img {
     width: 25px;
-}
-@media (max-width: 768px) {
-    .Project-cont{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+  }
+  
+  /* ——— Responsive Breakpoints ——— */
+  @media (max-width: 992px) {
+    /* 2‑column grid for medium screens */
+    .Project-cont {
+      grid-template-columns: repeat(2, 1fr);
     }
-    .Project-Img{
-        width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    /* 1‑column grid for small phones */
+    .Project-cont {
+      grid-template-columns: 1fr;
     }
-}
+  
+    .Project-Img {
+      max-width: 100%;
+    }
+  
+    .show_more-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  

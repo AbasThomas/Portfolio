@@ -1,32 +1,102 @@
-.Nav-container{
+.Nav-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 270px;
-}
-ul{
+  }
+  
+  ul {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 20px;
     font-family: "Winky Sans", sans-serif;
-}
-.navBtn{
+  }
+  
+  .navBtn {
     animation: zoomInOut 2s infinite ease-in-out;
-}
-@keyframes zoomInOut {
-    0% {
-        transform: scale(1);
+  }
+  
+  @keyframes zoomInOut {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Hide desktop nav on mobile */
+  @media (max-width: 768px) {
+    .Nav-container {
+      display: none;
     }
-    50% {
-        transform: scale(1.1);
+  }
+  
+  /* Mobile Nav base (hidden on desktop) */
+  .Mobile-Nav {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .Mobile-Nav {
+      display: block;
+      font-family: "Winky Sans", sans-serif;
+      position: relative;
+      z-index: 1000;
     }
-    100% {
-        transform: scale(1);
+  
+    .mobile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
     }
-}
-@media (max-width: 768px) {
-    .Nav-container{
-        display: none;
+  
+    .menu-toggle {
+      cursor: pointer;
     }
-}
+  
+    /* Overlay that dims the page */
+    .menu-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(28, 27, 25, 0.8); /* close to #161513 but not exact */
+      z-index: 998;
+    }
+  
+    /* Sliding menu from the right */
+    .mobile-menu {
+      position: fixed;
+      top: 0; right: -100%;
+      width: 70%; height: 100vh;
+      background-color: #1c1b19; /* dark, near #161513 */
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: right 0.3s ease;
+      z-index: 999;
+    }
+  
+    .mobile-menu.open {
+      right: 0;
+    }
+  
+    .mobile-menu ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .mobile-menu li {
+      font-size: 1.1rem;
+    }
+  
+    .mobile-menu .navBtn {
+      margin-top: 1.5rem;
+      animation: zoomInOut 2s infinite ease-in-out;
+    }
+  }
+    
