@@ -6,9 +6,9 @@ import ProfileImg from '../../src/assets/pfp.jpg';
 
 const About = () => {
   const stats = [
-    { number: '10+', text: 'Years Of Experience' },
-    { number: '100+', text: 'Completed Projects' },
-    { number: '50+', text: 'Happy Clients' },
+    { number: '2+', text: 'Years Of Experience' },
+    { number: '20+', text: 'Completed Projects' },
+    { number: '1', text: 'Happy Clients' },
   ];
 
   return (
